@@ -41,11 +41,6 @@ class App extends PureComponent {
     this.setState({ habits });
   };
 
-  handleCount = (habit) => {
-    const habitCount = this.state.habits.filter((item) => item.count > 0);
-    this.setState({ habitCount });
-  };
-
   handleAdd = (name) => {
     const habits = [...this.state.habits, { id: Date.now(), name, count: 0 }];
     this.setState({ habits });

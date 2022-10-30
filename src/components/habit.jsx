@@ -14,15 +14,15 @@ class Habit extends Component {
   };
   render() {
     // 구조 분해 할당 대신 중괄호 안에 있는 게 이름이 동일해야 한다.
-    const name = this.props;
-    const count = this.props;
+    const name = this.props.name;
+    const count = this.props.count;
     return (
       <li className="habit">
         <span className="habit-name">{name}</span>
         <span className="habit-count">{count}</span>
         <button
           className="habit-button habit-increase"
-          onClick={this.handleIncrement}
+          onClick={(e) => console.log(e)}
         >
           <i className="fa-solid fa-square-plus"></i>
         </button>
